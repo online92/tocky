@@ -1,0 +1,16 @@
+version: '3'
+services:
+  ecoscribe:
+    container_name: ecoscribe-ai
+    build: .
+    restart: unless-stopped
+    ports:
+      - "5173:5173"
+    environment:
+      # Thay thế bằng API Key Gemini thực của bạn ở đây
+      - API_KEY=AIzaSyCVlwe3nR6YzM3pGmhlMSQ3_T4pU8N1DNM
+    volumes:
+      # Mount thư mục hiện tại vào container để code chạy trực tiếp
+      - /volume1/docker/ecoscribe:/app
+      # Tránh ghi đè node_modules trong container
+      - /app/node_modules
