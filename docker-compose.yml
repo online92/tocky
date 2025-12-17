@@ -3,6 +3,9 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    container_name: tocky
+      args:
+        VITE_GOOGLE_API_KEY: ${VITE_GOOGLE_API_KEY}
+    environment:
+      - VITE_GOOGLE_API_KEY=${VITE_GOOGLE_API_KEY}
     ports:
       - "8080:80"
