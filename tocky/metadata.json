@@ -1,7 +1,0 @@
-{
-  "name": "APP TỐC Ký",
-  "description": "A smart stenography and dictation application supporting English, Vietnamese, and Japanese, powered by Gemini.",
-  "requestFramePermissions": [
-    "microphone"
-  ]
-}
