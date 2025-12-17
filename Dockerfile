@@ -5,7 +5,7 @@ WORKDIR /app
 
 # nhận biến môi trường lúc build
 ARG VITE_GOOGLE_API_KEY
-ENV VITE_GOOGLE_API_KEY=AIzaSyCVlwe3nR6YzM3pGmhlMSQ3_T4pU8N1DNM
+ENV VITE_GOOGLE_API_KEY=${VITE_GOOGLE_API_KEY}
 
 COPY package*.json ./
 RUN npm install
