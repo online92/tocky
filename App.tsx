@@ -420,7 +420,7 @@ function App() {
                 <Sidebar className="w-5 h-5"/>
              </button>
              <h1 className="text-xl font-bold text-emerald-800 flex items-center gap-2 truncate">
-               {currentFile ? currentFile.name : 'EcoScribe AI'}
+               {currentFile ? currentFile.name : 'ENDO Tốc Ký'}
              </h1>
           </div>
           
