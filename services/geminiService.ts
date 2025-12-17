@@ -1,7 +1,15 @@
 import { GoogleGenAI, Type } from "@google/genai";
 import { SupportedLanguage, TranscriptSegment } from "../types";
 
-const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
+const apiKey = import.meta.env.VITE_GOOGLE_API_KEY;
+
+if (!apiKey) {
+  throw new Error("VITE_GOOGLE_API_KEY is not defined");
+}
+
+const ai = new GoogleGenAI({ apiKey });
+
+export default ai;
 
 // Helper to map language code to prompt string
 const getLangPrompt = (lang: SupportedLanguage) => {
